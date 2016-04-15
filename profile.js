@@ -63,7 +63,7 @@ $(document).ready(function() {
 
             if (adminstatus === ''){}
             else{
-                $("#boot_username >.dropdown-menu").append("<li><a href=\"/admin\">Admin</a></li>");
+                $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\"><a href=\"/admin\">Admin</a></li>");
             }
 
             //Load like button
