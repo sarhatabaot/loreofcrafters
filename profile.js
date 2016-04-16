@@ -30,10 +30,9 @@ $(document).ready(function() {
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\" id=\"boot_dashboard\"></li>");
                 $("#boot_messages").append("<a href=\"/dashboard/messages\"><span class=\"badge label label-default label-pill pull-xs-right\">"+ messages +" </span> Messages</a>");
                 //Applications display
-                $("#boot_applications").append("<a href=\"/dashboard/applications\"><span class=\"badge pull-xs-right\">0</span> Applications</a>");
-                $("#boot_applications").append("<a href=\"/dashboard/applications\"><span class=\"badge pull-xs-right\">"+ applications +" </span> Applications</a>");
+                $("#boot_applications").append("<a href=\"/dashboard/applications\"><span class=\"badge label-default label-pill pull-xs-right\">"+ applications +" </span> Applications</a>");
                 //Notification count on dashboard link display
-                $("#boot_dashboard").append("<a href=\"/dashboard\" target=\"_blank\"><span class=\"badge pull-right\">"+ notifications +" </span> Dashboard</a>");
+                $("#boot_dashboard").append("<a href=\"/dashboard\" target=\"_blank\"><span class=\"badge label-default label-pill pull-xs-right\">"+ notifications +" </span> Dashboard</a>");
                 //Admin link display, admin only
                 if (adminstatus === ''){
                     $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\"><a href=\"/admin\">Admin</a></li>");
