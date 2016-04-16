@@ -33,7 +33,7 @@ $(document).ready(function() {
             else{
                 $.hook("nav-username nav-link").prepend(username+"<b class=\"caret\"></b>");
                 $.hook("nav-username nav-dropdown-menu").append("<li class=\"dropdown-item\" data-hook=\"nav-join\"></li>");
-                $.hook('#enjin-bar .right .join-site a').prependTo($.hook('nav-join'));
+                $('#enjin-bar .right .join-site a').prependTo($.hook('nav-join'));
                 $.hook("nav-username nav-dropdown-menu").append("<li class=\"dropdown-item\"><a href=\"/profile\" target=\"_blank\">Profile</a></li>");
                 $.hook("nav-username nav-dropdown-menu").append("<li class=\"dropdown-item\"><a href=\"/dashboard/settings\" target=\"_blank\">Account Settings</a></li>");
                 $.hook("nav-username nav-dropdown-menu").append("<li class=\"dropdown-item\"><a href=\"/dashboard/settings/website\" target=\"_blank\">Website Settings</a></li>");
