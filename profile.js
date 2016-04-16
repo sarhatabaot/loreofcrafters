@@ -17,7 +17,6 @@ $(document).ready(function() {
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\" id=\"boot_register\"></li>");
                 $('#enjin-bar a[href$="/register"]').prependTo($('#boot_register'));
             }
-
             else{
                 $("#boot_username >a").prepend(username+"<b class=\"caret\"></b>");
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\" id=\"boot_join\"></li>");
@@ -28,46 +27,34 @@ $(document).ready(function() {
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\" id=\"boot_messages\"></li>");
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\" id=\"boot_applications\"></li>");
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\" id=\"boot_dashboard\"></li>");
-
             }
             //Messages display
-            if (messages === ''){
-                $("#boot_messages").append("<a href=\"/dashboard/messages\"><span class=\"badge label-success pull-right\">0</span> Messages</a>");
+            //if (messages === ''){
+            //    $("#boot_messages").append("<a href=\"/dashboard/messages\"><span class=\"badge label-success pull-right\">0</span> Messages</a>");
+            //}
+            if (messages !== ''){
+                $("#boot_messages").append("<a href=\"/dashboard/messages\"><span class=\"badge label label-default label-pill pull-xs-right\">"+ messages +" </span> Messages</a>");
             }
-
-            else{
-                $("#boot_messages").append("<a href=\"/dashboard/messages\"><span class=\"badge label-success pull-right\">"+ messages +" </span> Messages</a>");
-            }
-
             //Applications display
-
             if (applications === ''){
-                $("#boot_applications").append("<a href=\"/dashboard/applications\"><span class=\"badge pull-right\">0</span> Applications</a>");
+                $("#boot_applications").append("<a href=\"/dashboard/applications\"><span class=\"badge pull-xs-right\">0</span> Applications</a>");
             }
-
             else{
-                $("#boot_applications").append("<a href=\"/dashboard/applications\"><span class=\"badge pull-right\">"+ applications +" </span> Applications</a>");
+                $("#boot_applications").append("<a href=\"/dashboard/applications\"><span class=\"badge pull-xs-right\">"+ applications +" </span> Applications</a>");
             }
-
             //Notification count on dashboard link display
-
             if (notifications === ''){
                 $("#boot_dashboard").append("<a href=\"/dashboard\"><span class=\"badge pull-right\">0</span> Dashboard</a>");
             }
-
             else{
                 $("#boot_dashboard").append("<a href=\"/dashboard\" target=\"_blank\"><span class=\"badge pull-right\">"+ notifications +" </span> Dashboard</a>");
             }
-
             //Admin link display, admin only
-
             if (adminstatus === ''){}
             else{
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\"><a href=\"/admin\">Admin</a></li>");
             }
-
             //Load like button
-
             if (username !== ''){ 
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-divider\"></li>");
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-header \">Enjin Popularity</li>");
@@ -75,10 +62,8 @@ $(document).ready(function() {
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-divider\"></li>");
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-header\">Account</li>");
                 $("#boot_username >.dropdown-menu").append("<li class=\"dropdown-item\"><a href=\"/logout\">Logout</a></li>");
-
             }
             //Display username after scripts finish
-
             $( "#boot_username" ).show();
         }, 1);
 });
